@@ -3,7 +3,9 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Интернет-магазин игрушек ручной работы Мишка — главная</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page__body">
@@ -17,24 +19,31 @@
             alt="Логотип интернет-магазина Мишка">
         </picture>
       </a>
-      <nav class="menu">
-        <ul class="site-list">
+      <nav class="menu menu--opened">
+        <button class="menu__toggle" aria-label="Открыть выпадающее меню"></button>
+        <ul class="menu__list site-list">
           <li class="site-list__item">
             <a class="site-list__link" href="catalog.html">Каталог товаров</a>
           </li>
           <li class="site-list__item">
             <a class="site-list__link" href="form.html">Вязание на заказ</a>
           </li>
+          <li class="site-list__item site-list__item--extra">
+            <a class="site-list__link site-list__link--extra" href="form.html">Новые поступления</a>
+          </li>
+          <li class="site-list__item site-list__item--extra">
+            <a class="site-list__link site-list__link--extra" href="form.html">Распродажа</a>
+          </li>
         </ul>
         <ul class="user-list">
           <li class="user-list__item">
-            <a class="user-list__link" href="#">
+            <a class="user-list__link user-list__link--search" href="#">
               <svg class="user-list__icon" xmlns="http://www.w3.org/2000/svg" width="17.6" height="17.6"
                 viewBox="-0.8 -0.8 17.6 17.6" fill="#000000" fill-opacity="0.2" aria-hidden="true">
                 <path
                   d="M16.47 14.93l-3.415-3.415A7.67 7.67 0 0014.6 6.899C14.6 2.646 11.153-.8 6.9-.8S-.8 2.646-.8 6.899s3.446 7.7 7.699 7.7c1.734 0 3.326-.58 4.613-1.546l3.417 3.416c.203.202.418.33.771.33a1.1 1.1 0 001.1-1.1c0-.24-.061-.499-.33-.769zM1.399 6.899a5.5 5.5 0 1111 0c0 3.038-2.462 5.5-5.5 5.5s-5.5-2.461-5.5-5.5z" />
-                </svg>
-              <span class="user-list__link-text">Поиск по сайту</span>
+              </svg>
+              Поиск по сайту
             </a>
           </li>
           <li class="user-list__item">
@@ -43,17 +52,9 @@
                 viewBox="264.205 370.961 20.294 18.849" fill="#000000" fill-opacity="0.2" aria-hidden="true">
                 <path
                   d="M283.75 378.19h-3.151l-3.407-6.814a.75.75 0 10-1.341.671l3.071 6.143h-9.138l3.072-6.143a.75.75 0 00-1.341-.671l-3.407 6.814h-3.151a.75.75 0 000 1.5h.157l.855 2.991a.737.737 0 00-.316.595c0 .396.309.71.697.739l1.656 5.795h12.697l1.656-5.795a.745.745 0 00.698-.739.738.738 0 00-.316-.596l.854-2.991h.157a.75.75 0 10-.002-1.499zm-4.181 10.121h-10.433l-1.224-4.284h12.881l-1.224 4.284zm1.653-5.785h-13.739l-.81-2.836h15.359l-.81 2.836z" />
-                </svg>
+              </svg>
               Корзина: пока пуста
             </a>
-          </li>
-        </ul>
-        <ul class="extra-list">
-          <li class="extra-list__item">
-            <a class="extra-list__link" href="#">Новые поступления</a>
-          </li>
-          <li class="extra-list__item">
-            <a class="extra-list__link" href="#">Распродажа</a>
           </li>
         </ul>
       </nav>
@@ -64,7 +65,7 @@
     <h1 class="visually-hidden">Интернет-магазин игрушек ручной работы Мишка</h1>
     <section class="promo">
       <div class="container">
-        <h2 class="promo__title section-title">Милые штуки ручной работы для дома</h2>
+        <h2 class="promo__title section-title">Милые штуки ручной<br> работы для дома</h2>
         <ul class="promo__list">
           <li class="promo__item">
             <a class="promo__link" href="#">
@@ -193,7 +194,7 @@
   <footer class="page-footer">
     <div class="container">
       <a class="page-footer__logo"></a>
-      <ul class="social__list">
+      <ul class="social">
         <li class="social__item">
           <a class="social__link" href="#" aria-label="Мы в instagram">
             <svg class="social__icon" xmlns="http://www.w3.org/2000/svg" width="21.769" height="21.334"
