@@ -1,0 +1,22 @@
+.button {
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: top;
+  padding: 14px 40px;
+  .font(18px, 20px);
+  font-weight: bold;
+  color: @dark-gray;
+  text-transform: uppercase;
+  text-align: center;
+  border: 2px solid @dark-gray;
+
+  &:hover,
+  &:focus {
+    color: @basic-white;
+    background-color: @dark-gray;
+  }
+
+  &:active {
+    color: rgba(@basic-white, 0.3);
+  }
+}

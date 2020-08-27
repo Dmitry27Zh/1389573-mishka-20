@@ -33,8 +33,23 @@
   margin: 0;
   margin-bottom: 120px;
   text-align: center;
-  @media (min-width: @mobile-width) {
+
+  @media (min-width: @mobile-width) and (max-width: @tablet-width - 1) {
     font-size: 27px;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 372px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 355px;
+  }
+}
+
+.promo__list {
+  @media (min-width: @tablet-width) {
+    display: flex;
   }
 }
 
@@ -74,6 +89,10 @@
       }
     }
   }
+
+  @media (min-width: @tablet-width) {
+    width: 50%;
+  }
 }
 
 .promo__link {
@@ -81,6 +100,12 @@
   color: @basic-white;
   padding-top: 25px;
   padding-bottom: 30px;
+  padding-right: 62px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 36px;
+    padding-right: 100px;
+  }
 }
 
 .promo__link-title {
@@ -98,5 +123,9 @@
     height: 62px;
     background: url("../img/icon-interior.svg") no-repeat top right;
     opacity: 0.5;
+
+    @media (min-width: @tablet-width) {
+      right: 35px;
+    }
   }
 }

@@ -86,36 +86,38 @@
           <h2 class="popular__title section-title">Вязаные корзинки</h2>
           <h3 class="popular__subtitle">Товар недели</h3>
         </div>
-        <div class="popular__text">
-          <p class="popular__description">
-            Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.
-          </p>
-          <table class="popular__table">
-            <tr>
-              <th>Цвет:</th>
-              <td>«Тиффани»/серый</td>
-            </tr>
-            <tr>
-              <th>Диаметр:</th>
-              <td>25 см</td>
-            </tr>
-            <tr>
-              <th>Высота:</th>
-              <td>15 см</td>
-            </tr>
-          </table>
-          <p class="popular__cost">Цена: 990 руб.</p>
-          <a class="button popular__link" href="#">Заказать</a>
-        </div>
-        <div class="popular__photo">
-          <picture>
-            <source media="(min-width: 1150px)"
-              srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
-            <source media="(min-width: 768px)"
-              srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
-            <img class="popular__img" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x"
-              width="260" height="315" alt="Изображение товара">
-          </picture>
+        <div class="popular__wrapper">
+          <div class="popular__text">
+            <p class="popular__description">
+              Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.
+            </p>
+            <table class="popular__table">
+              <tr>
+                <th>Цвет:</th>
+                <td>«Тиффани»/серый</td>
+              </tr>
+              <tr>
+                <th>Диаметр:</th>
+                <td>25 см</td>
+              </tr>
+              <tr>
+                <th>Высота:</th>
+                <td>15 см</td>
+              </tr>
+            </table>
+            <div class="popular__photo">
+              <picture>
+                <source media="(min-width: 1150px)"
+                  srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
+                <img class="popular__img" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x"
+                  width="260" height="315" alt="Изображение товара">
+              </picture>
+            </div>
+            <p class="popular__cost">Цена: 990 руб.</p>
+            <a class="button popular__link" href="#">Заказать</a>
+          </div>
         </div>
       </div>
     </section>
@@ -123,22 +125,22 @@
       <div class="container">
         <h2 class="info__title section-title">Коротко о нас:</h2>
         <ul class="info__list">
-          <li class="info__item">
+          <li class="info__item info__item--eco">
             <h3 class="info__item-title">Экологически чистые материалы</h3>
           </li>
-          <li class="info__item">
+          <li class="info__item info__item--price">
             <h3 class="info__item-title">Скандинавский стиль по российской цене</h3>
           </li>
-          <li class="info__item">
+          <li class="info__item info__item--like">
             <h3 class="info__item-title">Увеличивает лайки на фотографиях</h3>
           </li>
-          <li class="info__item">
+          <li class="info__item info__item--love">
             <h3 class="info__item-title">Связано вручную с любовью и умилением</h3>
           </li>
-          <li class="info__item">
+          <li class="info__item info__item--support">
             <h3 class="info__item-title">Поддержка отечественного производителя</h3>
           </li>
-          <li class="info__item">
+          <li class="info__item info__item--pack">
             <h3 class="info__item-title">Поставляется в подарочной упаковке</h3>
           </li>
         </ul>
