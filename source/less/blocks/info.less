@@ -1,0 +1,95 @@
+.info {
+  padding-top: 31px;
+  padding-bottom: 68px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 55px;
+    padding-bottom: 83px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 68px;
+    padding-bottom: 90px;
+  }
+
+  .container {
+    @media (min-width: @desktop-width) {
+      padding-left: 176px;
+    }
+  }
+}
+
+.info__list {
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    row-gap: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 1fr 525px;
+  }
+}
+
+.info__title {
+  margin-bottom: 26px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 40px;
+  }
+}
+
+.info__item {
+  position: relative;
+  padding-top: 56px;
+
+  @media (min-width: @mobile-width) and (max-width: @tablet-width - 1) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 55px;
+    height: 38px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--eco::before {
+    background-image: url("../img/icon-feature-flower.svg");
+  }
+
+  &--price::before {
+    background-image: url("../img/icon-feature-money.svg");
+  }
+
+  &--like::before {
+    background-image: url("../img/icon-feature-heart.svg");
+  }
+
+  &--love::before {
+    background-image: url("../img/icon-feature-ball.svg");
+  }
+
+  &--support::before {
+    background-image: url("../img/icon-feature-rocket.svg");
+  }
+
+  &--pack::before {
+    background-image: url("../img/icon-feature-gift.svg");
+  }
+}
+
+.info__item-title {
+  margin: 0;
+  .font(17px, 20px);
+
+  @media (min-width: @tablet-width) {
+    width: 293px;
+  }
+}

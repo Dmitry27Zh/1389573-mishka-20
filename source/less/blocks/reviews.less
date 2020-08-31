@@ -1,0 +1,114 @@
+.reviews {
+  padding-bottom: 45px;
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1) {
+    padding-top: 82px;
+    padding-bottom: 47px;
+    background: url("../img/review@1x.jpg") no-repeat;
+    background-size: 350px 450px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/review@2x.jpg");
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 78px;
+    padding-bottom: 96px;
+    background: url("../img/review@1x.jpg") no-repeat;
+    background-position: calc((100vw - 1050px) / 2);
+    background-size: 350px 450px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/review@2x.jpg");
+    }
+  }
+
+  .container {
+    @media (min-width: @desktop-width) {
+      padding-left: 176px;
+    }
+  }
+}
+
+.reviews__item-inner {
+  margin: 0;
+}
+
+.reviews__text {
+  margin-top: 14px;
+  margin-bottom: 33px;
+  .font(15px, 30px);
+  color: @dark-gray;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 38px;
+    margin-bottom: 61px;
+    font-size: 17px;
+  }
+}
+
+.reviews__author {
+  font-weight: bold;
+  font-style: normal;
+}
+
+.reviews__author-account {
+  display: block;
+  font-weight: normal;
+  line-height: 30px;
+}
+
+.reviews__controls {
+  display: flex;
+  margin-top: 30px;
+  margin-bottom: 38px;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 176px;
+    margin: 0;
+  }
+}
+
+.reviews__button {
+  width: 50%;
+  height: 52px;
+  background-color: transparent;
+  border: 1px solid @border-gray;
+
+  @media (min-width: @tablet-width) {
+    border: none;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--prev {
+    border-right: none;
+    background: url("../img/icon-left-arrow.svg") no-repeat center;
+  }
+
+  &--next {
+    background: url("../img/icon-right-arrow.svg") no-repeat center;
+  }
+}
+
+.reviews__message {
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: auto;
+  }
+}

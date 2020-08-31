@@ -1,0 +1,131 @@
+.promo {
+  padding-top: 73px;
+  background-color: @promo-background;
+  background-image: url("../img/hero-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 575px 373px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/hero-mobile@2x.jpg");
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-top: 155px;
+    background-size: 1150px 746px;
+    background-image: url("../img/hero-tablet@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/hero-tablet@2x.jpg");
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../img/hero-desktop@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/hero-desktop@2x.jpg");
+    }
+  }
+}
+
+.promo__title {
+  margin: 0;
+  margin-bottom: 120px;
+  text-align: center;
+
+  @media (min-width: @mobile-width) and (max-width: @tablet-width - 1) {
+    font-size: 27px;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 372px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 355px;
+  }
+}
+
+.promo__list {
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
+}
+
+.promo__item {
+  position: relative;
+  background-color: @light-cyan;
+
+  &:last-child {
+    background-color: @medium-cyan;
+
+    .promo__link-title::after {
+      background-image: url("../img/icon-toy.svg");
+    }
+  }
+
+  @media (min-width: @mobile-width) and (max-width: @tablet-width - 1) {
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 100%;
+      width: calc(18.75vw / 2);
+      height: 100%;
+      background-color: @light-cyan;
+    }
+
+    &::after {
+      left: 100%;
+      right: auto;
+    }
+
+    &:last-child {
+      &::before,
+      &::after {
+        background-color: @medium-cyan;
+      }
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 50%;
+  }
+}
+
+.promo__link {
+  display: block;
+  color: @basic-white;
+  padding-top: 25px;
+  padding-bottom: 30px;
+  padding-right: 62px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 36px;
+    padding-right: 100px;
+  }
+}
+
+.promo__link-title {
+  margin: 0;
+  width: 130px;
+  font-size: 19px;
+  font-weight: bold;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 23px;
+    right: 0;
+    width: 62px;
+    height: 62px;
+    background: url("../img/icon-interior.svg") no-repeat top right;
+    opacity: 0.5;
+
+    @media (min-width: @tablet-width) {
+      right: 35px;
+    }
+  }
+}

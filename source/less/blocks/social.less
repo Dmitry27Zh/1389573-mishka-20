@@ -1,0 +1,30 @@
+.social {
+  display: flex;
+  align-items: center;
+  margin-right: -40px;
+
+  @media (min-width: @tablet-width) {
+    max-width: 300px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 650px;
+  }
+}
+
+.social__item {
+  margin-right: 40px;
+}
+
+.social__link {
+  &:hover,
+  &:focus {
+    .social__icon {
+      fill: @icon-hover-cyan;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
