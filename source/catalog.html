@@ -155,22 +155,25 @@
     </section>
     <section class="production">
       <div class="container">
-        <h2 class="production__title">Процесс производства</h2>
+        <h2 class="production__title"><span class="production__title-wrapper">Процесс производства</span></h2>
         <div class="production__video">
           <!--<video src="#" poster="img/video-mobile@1x.jpg"></video>-->
           <picture>
             <source media="(min-width: 1150px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
             <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
-            <img class="production__poster" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" alt="Превью">
+            <img class="production__poster" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x"
+              alt="Превью">
           </picture>
           <button class="production__play-btn">
             <img class="production__play-img" src="img/icon-play.svg" width="100" height="77" alt="Кнопка play">
           </button>
         </div>
-        <p class="production__description">
-          По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
-        </p>
-        <a class="button production__link" href="#">Сделать заказ</a>
+        <div class="production__wrapper">
+          <p class="production__description">
+            По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
+          </p>
+          <a class="button production__link" href="#">Сделать заказ</a>
+        </div>
       </div>
     </section>
   </main>
