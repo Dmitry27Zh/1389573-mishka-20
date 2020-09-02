@@ -6,7 +6,14 @@
 
 .user-list__item {
   @media (min-width: @mobile-width) and (max-width: @tablet-width - 1) {
-    padding: 28px 0;
+    &::before {
+      content: "";
+      position: absolute;
+      left: calc(18.75vw / -2);
+      width: 100vw;
+      height: 1px;
+      background-color: @border-gray;
+    }
   }
 }
 
@@ -14,6 +21,10 @@
   position: relative;
   display: block;
   color: @basic-black;
+
+  @media (min-width: @mobile-width) and (max-width: @tablet-width - 1) {
+    padding: 28px 0;
+  }
 
   &--search {
     @media (min-width: @tablet-width) {
@@ -24,7 +35,7 @@
 
   .user-list__icon {
     position: absolute;
-    top: 0;
+    top: 28;
     left: -46px;
   }
 }

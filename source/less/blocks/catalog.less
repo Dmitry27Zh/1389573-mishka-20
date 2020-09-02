@@ -1,0 +1,151 @@
+.catalog {
+  padding: 30px 0;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 67px;
+    padding-bottom: 53px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 111px;
+    padding-bottom: 57px;
+  }
+}
+
+.catalog__list {
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 316px 316px 316px;
+    justify-content: space-between;
+  }
+}
+
+.catalog__item {
+  &:not(:last-child) {
+    margin-bottom: 30px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 54px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 316px;
+    grid-template-rows: min-content 1fr;
+  }
+
+  &:hover,
+  &:focus {
+    .catalog__item-text {
+      box-shadow: 0 6px 10px rgba(@basic-black, 0.1);
+    }
+  }
+
+  &:active {
+    .catalog__item-text {
+      box-shadow: 0 3px 5px rgba(@basic-black, 0.1);
+    }
+  }
+}
+
+.catalog__item-photo {
+  display: block;
+}
+
+.catalog__img {
+  display: block;
+  width: 100%;
+}
+
+.catalog__item-text {
+  padding: 28px;
+  border: 1px solid @border-gray;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+    padding: 27px 34px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-row-start: 2;
+  }
+}
+
+.catalog__item-title {
+  width: 180px;
+  margin: 0;
+  margin-bottom: 6px;
+  font-size: 17px;
+  font-weight: bold;
+
+  @media (min-width: @tablet-width) {
+    width: 230px;
+    font-size: 20px;
+
+    &--wrap {
+      width: 205px;
+    }
+  }
+}
+
+.catalog__item-link {
+  color: inherit;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.catalog__item-parameters {
+  margin: 0;
+  padding-bottom: 18px;
+  border-bottom: 1px solid @border-gray;
+  .font(13px, 30px);
+  color: @dark-gray;
+
+  @media (min-width: @tablet-width) {
+    flex-grow: 1;
+    font-size: 15px;
+  }
+}
+
+.catalog__item-purchase {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  margin-top: 22px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.catalog__item-add {
+  &:hover,
+  &:focus {
+    .catalog__item-icon {
+      fill: @light-cyan;
+      fill-opacity: 1;
+    }
+  }
+
+  &:active {
+    .catalog__item-icon {
+      fill-opacity: 0.3;
+    }
+  }
+}
