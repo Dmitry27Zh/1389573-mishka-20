@@ -18,6 +18,17 @@
 }
 
 .site-list__item {
+  @media (min-width: @mobile-width) and (max-width: @tablet-width - 1) {
+    &::before {
+      content: "";
+      position: absolute;
+      left: calc(18.75vw / -2);
+      width: 100vw;
+      height: 1px;
+      background-color: @border-gray;
+    }
+  }
+
   @media (min-width: @mobile-width) and (max-width: @desktop-width - 1) {
     &--extra {
       display: none;
