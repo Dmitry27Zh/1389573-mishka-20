@@ -22,6 +22,12 @@
         box-shadow: none;
       }
     }
+
+    .menu__list {
+      @media (max-width: @tablet-width - 1) {
+        display: block;
+      }
+    }
   }
 }
 
@@ -56,6 +62,12 @@
   }
 
   @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.menu__list {
+  @media (max-width: @tablet-width - 1) {
     display: none;
   }
 }
