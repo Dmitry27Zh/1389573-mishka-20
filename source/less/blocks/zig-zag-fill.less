@@ -1,0 +1,21 @@
+.zig-zag-fill {
+  @media (min-width: @tablet-width) {
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 24px;
+      left: 0;
+      bottom: -12px;
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-size: auto 100%;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &::after {
+      height: 34px;
+      bottom: -17px;
+    }
+  }
+}
