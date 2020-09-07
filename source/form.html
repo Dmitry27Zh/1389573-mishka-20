@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Интернет-магазин игрушек ручной работы Мишка — каталог товаров</title>
+  <title>Интернет-магазин игрушек ручной работы Мишка — вязание на заказ</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -23,10 +23,10 @@
         <button class="menu__toggle" aria-label="Открыть выпадающее меню"></button>
         <ul class="menu__list site-list">
           <li class="site-list__item">
-            <a class="site-list__link">Каталог товаров</a>
+            <a class="site-list__link" href="catalog.html">Каталог товаров</a>
           </li>
           <li class="site-list__item">
-            <a class="site-list__link" href="form.html">Вязание на заказ</a>
+            <a class="site-list__link">Вязание на заказ</a>
           </li>
           <li class="site-list__item site-list__item--extra">
             <a class="site-list__link site-list__link--extra" href="form.html">Новые поступления</a>
@@ -64,117 +64,113 @@
   <main>
     <div class="page__body-title zig-zag-fill">
       <div class="container">
-        <h1 class="section-title">Каталог товаров</h1>
+        <h1 class="section-title">Вязание на заказ</h1>
       </div>
     </div>
-    <section class="catalog">
+    <section class="order">
+      <h1 class="visually-hidden">Форма заказа</h1>
       <div class="container">
-        <h2 class="visually-hidden">Список товаров каталога</h2>
-        <ul class="catalog__list">
-          <li class="catalog__item">
-            <a class="catalog__item-photo" href="#">
-              <picture>
-                <source media="(min-width: 1150px)"
-                  srcset="img/photo-hare-desktop@1x.jpg 1x, img/photo-hare-desktop@2x.jpg 2x">
-                <source media="(min-width: 768px)"
-                  srcset="img/photo-hare-tablet@1x.jpg 1x, img/photo-hare-tablet@1x.jpg 2x">
-                <img class="catalog__img" src="img/photo-hare-mobile@1x.jpg" srcset="img/photo-hare-mobile@2x.jpg 2x"
-                  width="260" height="195" alt="Фотография товара">
-              </picture>
-            </a>
-            <div class="catalog__item-text">
-              <h3 class="catalog__item-title"><a class="catalog__item-link" href="#">Зайчик-попрыгайчик</a></h3>
-              <p class="catalog__item-parameters">Рост 30 см, вес 200 г</p>
-              <p class="catalog__item-purchase">
-                1 200 руб.
-                <a class="catalog__item-add" href="#" aria-label="Добавить в корзину">
-                  <svg class="catalog__item-icon" xmlns="http://www.w3.org/2000/svg" width="20.294" height="18.849"
-                    viewBox="264.205 370.961 20.294 18.849" fill="#000000" fill-opacity="0.2" aria-hidden="true">
-                    <path
-                      d="M283.75 378.19h-3.151l-3.407-6.814a.75.75 0 10-1.341.671l3.071 6.143h-9.138l3.072-6.143a.75.75 0 00-1.341-.671l-3.407 6.814h-3.151a.75.75 0 000 1.5h.157l.855 2.991a.737.737 0 00-.316.595c0 .396.309.71.697.739l1.656 5.795h12.697l1.656-5.795a.745.745 0 00.698-.739.738.738 0 00-.316-.596l.854-2.991h.157a.75.75 0 10-.002-1.499zm-4.181 10.121h-10.433l-1.224-4.284h12.881l-1.224 4.284zm1.653-5.785h-13.739l-.81-2.836h15.359l-.81 2.836z" />
-                  </svg>
-                </a>
-              </p>
-            </div>
-          </li>
-          <li class="catalog__item">
-            <a class="catalog__item-photo" href="#">
-              <picture>
-                <source media="(min-width: 1150px)"
-                  srcset="img/photo-bowl-desktop@1x.jpg 1x, img/photo-bowl-desktop@2x.jpg 2x">
-                <source media="(min-width: 768px)"
-                  srcset="img/photo-bowl-tablet@1x.jpg 1x, img/photo-bowl-tablet@1x.jpg 2x">
-                <img class="catalog__img" src="img/photo-bowl-mobile@1x.jpg" srcset="img/photo-bowl-mobile@2x.jpg 2x"
-                  width="260" height="195" alt="Фотография товара">
-              </picture>
-            </a>
-            <div class="catalog__item-text">
-              <h3 class="catalog__item-title"><a class="catalog__item-link" href="#">Корзинка для белья</a></h3>
-              <p class="catalog__item-parameters">Диаметр 15 см, высота 10 см</p>
-              <p class="catalog__item-purchase">
-                690 руб.
-                <a class="catalog__item-add" href="#" aria-label="Добавить в корзину">
-                  <svg class="catalog__item-icon" xmlns="http://www.w3.org/2000/svg" width="20.294" height="18.849"
-                    viewBox="264.205 370.961 20.294 18.849" fill="#000000" fill-opacity="0.2" aria-hidden="true">
-                    <path
-                      d="M283.75 378.19h-3.151l-3.407-6.814a.75.75 0 10-1.341.671l3.071 6.143h-9.138l3.072-6.143a.75.75 0 00-1.341-.671l-3.407 6.814h-3.151a.75.75 0 000 1.5h.157l.855 2.991a.737.737 0 00-.316.595c0 .396.309.71.697.739l1.656 5.795h12.697l1.656-5.795a.745.745 0 00.698-.739.738.738 0 00-.316-.596l.854-2.991h.157a.75.75 0 10-.002-1.499zm-4.181 10.121h-10.433l-1.224-4.284h12.881l-1.224 4.284zm1.653-5.785h-13.739l-.81-2.836h15.359l-.81 2.836z" />
-                  </svg>
-                </a>
-              </p>
-            </div>
-          </li>
-          <li class="catalog__item">
-            <a class="catalog__item-photo" href="#">
-              <picture>
-                <source media="(min-width: 1150px)"
-                  srcset="img/photo-toys-desktop@1x.jpg 1x, img/photo-toys-desktop@2x.jpg 2x">
-                <source media="(min-width: 768px)"
-                  srcset="img/photo-toys-tablet@1x.jpg 1x, img/photo-toys-tablet@1x.jpg 2x">
-                <img class="catalog__img" src="img/photo-toys-mobile@1x.jpg" srcset="img/photo-toys-mobile@2x.jpg 2x"
-                  width="260" height="195" alt="Фотография товара">
-              </picture>
-            </a>
-            <div class="catalog__item-text">
-              <h3 class="catalog__item-title catalog__item-title--wrap"><a class="catalog__item-link" href="#">Большая
-                  корзинка для игрушек</a></h3>
-              <p class="catalog__item-parameters">Диаметр 30 см, высота 30 см</p>
-              <p class="catalog__item-purchase">
-                1 500 руб.
-                <a class="catalog__item-add" href="#" aria-label="Добавить в корзину">
-                  <svg class="catalog__item-icon" xmlns="http://www.w3.org/2000/svg" width="20.294" height="18.849"
-                    viewBox="264.205 370.961 20.294 18.849" fill="#000000" fill-opacity="0.2" aria-hidden="true">
-                    <path
-                      d="M283.75 378.19h-3.151l-3.407-6.814a.75.75 0 10-1.341.671l3.071 6.143h-9.138l3.072-6.143a.75.75 0 00-1.341-.671l-3.407 6.814h-3.151a.75.75 0 000 1.5h.157l.855 2.991a.737.737 0 00-.316.595c0 .396.309.71.697.739l1.656 5.795h12.697l1.656-5.795a.745.745 0 00.698-.739.738.738 0 00-.316-.596l.854-2.991h.157a.75.75 0 10-.002-1.499zm-4.181 10.121h-10.433l-1.224-4.284h12.881l-1.224 4.284zm1.653-5.785h-13.739l-.81-2.836h15.359l-.81 2.836z" />
-                  </svg>
-                </a>
-              </p>
-            </div>
-          </li>
-        </ul>
+        <p class="order__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и
+          мы
+          свяжемся с вами, чтобы уточнить детали.</p>
       </div>
-    </section>
-    <section class="production">
-      <div class="container">
-        <h2 class="production__title"><span class="production__title-wrapper">Процесс производства</span></h2>
-        <div class="production__video">
-          <!--<video src="#" poster="img/video-mobile@1x.jpg"></video>-->
-          <picture>
-            <source media="(min-width: 1150px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
-            <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
-            <img class="production__poster" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x"
-              alt="Превью">
-          </picture>
-          <button class="production__play-btn">
-            <img class="production__play-img" src="img/icon-play.svg" width="100" height="77" alt="Кнопка play">
-          </button>
+      <form class="order__form" method="POST" action="https://echo.htmlacademy.ru">
+        <fieldset class="order__group">
+          <div class="container">
+            <legend class="order__group-name">Тип</legend>
+            <ul class="order__group-list order__group-list--type">
+              <li class="order__option order__option--type">
+                <input class="order__input visually-hidden" type="radio" id="type-accessory" name="type"
+                  value="accessory" checked>
+                <label class="order__option-name order__option-name--type" for="type-accessory">Аксессуар для
+                  интерьера</label>
+              </li>
+              <li class="order__option order__option--type">
+                <input class="order__input visually-hidden" type="radio" id="type-toy" name="type" value="toy">
+                <label class="order__option-name order__option-name--type" for="type-toy">Детская игрушка</label>
+              </li>
+            </ul>
+          </div>
+        </fieldset>
+        <fieldset class="order__group order__group--color">
+          <div class="container">
+            <legend class="order__group-name">Цвет</legend>
+            <ul class="order__group-list order__group-list--color">
+              <li class="order__option order__option--color">
+                <input class="order__input visually-hidden" type="checkbox" id="color-white" name="white" checked>
+                <label class="order__option-name order__option-name--color" for="color-white">Белый</label>
+              </li>
+              <li class="order__option order__option--color">
+                <input class="order__input visually-hidden" type="checkbox" id="color-gray" name="gray" checked>
+                <label class="order__option-name order__option-name--color" for="color-gray">Серый</label>
+              </li>
+              <li class="order__option order__option--color">
+                <input class="order__input visually-hidden" type="checkbox" id="color-tiffany" name="tiffany">
+                <label class="order__option-name order__option-name--color" for="color-tiffany">«Тиффани»</label>
+              </li>
+              <li class="order__option order__option--color">
+                <input class="order__input visually-hidden" type="checkbox" id="color-black" name="black">
+                <label class="order__option-name order__option-name--color" for="color-black">Чёрный</label>
+              </li>
+              <li class="order__option order__option--color">
+                <input class="order__input visually-hidden" type="checkbox" id="color-pink" name="pink">
+                <label class="order__option-name order__option-name--color" for="color-pink">Розовый</label>
+              </li>
+              <li class="order__option order__option--color">
+                <input class="order__input visually-hidden" type="checkbox" id="color-orange" name="orange">
+                <label class="order__option-name order__option-name--color" for="color-orange">Оранжевый</label>
+              </li>
+            </ul>
+          </div>
+        </fieldset>
+        <fieldset class="order__group">
+          <div class="container">
+            <legend class="order__group-name">ФИО</legend>
+            <ul class="order__group-list order__group-list--user">
+              <li class="order__option order__option--user">
+                <label class="order__option-name" for="user-name">Имя:</label>
+                <input class="order__input-text" type="text" id="user-name" name="user-name"
+                  placeholder="Введите ваше имя*" required>
+              </li>
+              <li class="order__option order__option--user">
+                <label class="order__option-name" for="user-surname">Фамилия:</label>
+                <input class="order__input-text" type="text" id="user-surname" name="user-surname"
+                  placeholder="Укажите фамилию*" required>
+              </li>
+              <li class="order__option order__option--user">
+                <label class="order__option-name" for="user-patronymic">Отчество:</label>
+                <input class="order__input-text" type="text" id="user-patronymic" name="user-patronymic"
+                  placeholder="Отчество, если желаете">
+              </li>
+            </ul>
+          </div>
+        </fieldset>
+        <div class="order__group order__group--contacts">
+          <div class="container">
+            <label class="order__group-name" for="user-tel">Тел</label>
+            <input class="order__input-text" type="tel" id="user-tel" name="user-tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*"
+              required>
+          </div>
+          <div class="container">
+            <label class="order__group-name" for="user-tel">E-mail</label>
+            <input class="order__input-text" type="email" id="user-email" name="user-email" placeholder="Ваш Email*"
+              required>
+          </div>
         </div>
-        <div class="production__wrapper">
-          <p class="production__description">
-            По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
-          </p>
-          <a class="button production__link" href="#">Сделать заказ</a>
+        <div class="order__group">
+          <div class="container">
+            <label class="order__group-name" for="user-extra">Доп</label>
+            <textarea class="order__input-extra" id="user-extra" name="user-extra"
+              placeholder="Опишите все ваши пожелания к заказу"></textarea>
+          </div>
         </div>
-      </div>
+        <div class="container">
+          <div class="order__wrapper">
+            <p class="order__info">*Поля обязательны для заполнения</p>
+            <button class="button order__button" type="submit">Отправить заказ</button>
+          </div>
+        </div>
+      </form>
     </section>
   </main>
   <footer class="page-footer">

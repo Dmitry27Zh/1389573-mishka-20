@@ -35,8 +35,8 @@
             <a class="site-list__link site-list__link--extra" href="form.html">Распродажа</a>
           </li>
         </ul>
-        <ul class="user-list">
-          <li class="user-list__item">
+        <ul class="menu__list user-list">
+          <li class="user-list__item user-list__item--search">
             <a class="user-list__link user-list__link--search" href="#">
               <svg class="user-list__icon" xmlns="http://www.w3.org/2000/svg" width="17.6" height="17.6"
                 viewBox="-0.8 -0.8 17.6 17.6" fill="#000000" fill-opacity="0.2" aria-hidden="true">
@@ -47,7 +47,7 @@
             </a>
           </li>
           <li class="user-list__item">
-            <a class="user-list__link" href="#">
+            <a class="user-list__link user-list__link--cart" href="#">
               <svg class="user-list__icon" xmlns="http://www.w3.org/2000/svg" width="20.294" height="18.849"
                 viewBox="264.205 370.961 20.294 18.849" fill="#000000" fill-opacity="0.2" aria-hidden="true">
                 <path
@@ -63,24 +63,24 @@
   </header>
   <main>
     <h1 class="visually-hidden">Интернет-магазин игрушек ручной работы Мишка</h1>
-    <section class="promo">
+    <section class="promo zig-zag-fill">
       <div class="container">
         <h2 class="promo__title section-title">Милые штуки ручной<br> работы для дома</h2>
         <ul class="promo__list">
           <li class="promo__item">
-            <a class="promo__link" href="#">
-              <h3 class="promo__link-title">Предметы интерьера</h3>
+            <a class="promo__link promo__link--interior" href="#">
+              <h3 class="promo__link-title promo__link-title--interior">Предметы интерьера</h3>
             </a>
           </li>
           <li class="promo__item">
-            <a class="promo__link" href="#">
-              <h3 class="promo__link-title">Детские игрушки</h3>
+            <a class="promo__link promo__link--toys" href="#">
+              <h3 class="promo__link-title promo__link-title--toys">Детские игрушки</h3>
             </a>
           </li>
         </ul>
       </div>
     </section>
-    <section class="popular">
+    <section class="popular zig-zag-line">
       <div class="container">
         <div class="popular__title-wrapper">
           <h2 class="popular__title section-title">Вязаные корзинки</h2>
@@ -146,7 +146,7 @@
         </ul>
       </div>
     </section>
-    <section class="reviews">
+    <section class="reviews zig-zag-line">
       <div class="container">
         <h2 class="reviews__title section-title">Отзывы</h2>
         <ul class="reviews__list">
@@ -248,6 +248,7 @@
       </a>
     </div>
   </footer>
+  <script src="js/mobile-menu.js"></script>
 </body>
 
 </html>

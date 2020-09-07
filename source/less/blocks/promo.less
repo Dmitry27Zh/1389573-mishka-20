@@ -1,4 +1,5 @@
 .promo {
+  position: relative;
   padding-top: 73px;
   background-color: @promo-background;
   background-image: url("../img/hero-mobile@1x.jpg");
@@ -54,14 +55,35 @@
 }
 
 .promo__item {
-  position: relative;
-  background-color: @light-cyan;
+  @media (min-width: @tablet-width) {
+    width: 50%;
+  }
+}
 
-  &:last-child {
-    background-color: @medium-cyan;
+.promo__link {
+  position: relative;
+  display: block;
+  padding-top: 25px;
+  padding-bottom: 30px;
+  padding-right: 62px;
+  background-color: @light-cyan;
+  color: @basic-white;
+
+  &:hover,
+  &:focus {
+    padding-bottom: 35px;
+    background-color: @promo-btn-cyan;
 
     .promo__link-title::after {
-      background-image: url("../img/icon-toy.svg");
+      opacity: 0.7;
+    }
+  }
+
+  &:active {
+    box-shadow: 0 4px 4px rgba(@basic-black, 0.25);
+
+    .promo__link-title::after {
+      opacity: 0.3;
     }
   }
 
@@ -82,7 +104,7 @@
       right: auto;
     }
 
-    &:last-child {
+    &--toys {
       &::before,
       &::after {
         background-color: @medium-cyan;
@@ -90,17 +112,14 @@
     }
   }
 
-  @media (min-width: @tablet-width) {
-    width: 50%;
-  }
-}
+  &--toys {
+    background-color: @medium-cyan;
 
-.promo__link {
-  display: block;
-  color: @basic-white;
-  padding-top: 25px;
-  padding-bottom: 30px;
-  padding-right: 62px;
+    &:hover,
+    &:focus {
+      background-color: @icon-hover-cyan;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     padding-left: 36px;
@@ -121,11 +140,20 @@
     right: 0;
     width: 62px;
     height: 62px;
-    background: url("../img/icon-interior.svg") no-repeat top right;
     opacity: 0.5;
+    background-repeat: no-repeat;
+    background-position: top right;
 
     @media (min-width: @tablet-width) {
       right: 35px;
     }
+  }
+
+  &--interior::after {
+    background-image: url("../img/icon-interior.svg");
+  }
+
+  &--toys::after {
+    background-image: url("../img/icon-toy.svg");
   }
 }

@@ -15,6 +15,18 @@
       background-color: @border-gray;
     }
   }
+
+  @media (min-width: @tablet-width) {
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background-color: @border-gray;
+    }
+  }
 }
 
 .user-list__link {
@@ -22,14 +34,33 @@
   display: block;
   color: @basic-black;
 
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+
+    .user-list__icon {
+      fill: @light-cyan;
+      fill-opacity: 1;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @media (min-width: @mobile-width) and (max-width: @tablet-width - 1) {
     padding: 28px 0;
   }
 
-  &--search {
-    @media (min-width: @tablet-width) {
-      margin-right: 63px;
+  @media (min-width: @tablet-width) {
+    &--search {
+      padding-left: 32px;
+      padding-right: 50px;
       font-size: 0;
+    }
+
+    &--cart {
+      padding-left: 83px;
     }
   }
 
@@ -37,5 +68,9 @@
     position: absolute;
     top: 28;
     left: -46px;
+
+    @media (min-width: @tablet-width) {
+      left: 32px;
+    }
   }
 }
