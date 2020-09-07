@@ -66,6 +66,12 @@
       }
     }
   }
+
+  &--contacts {
+    .container:first-child {
+      padding-bottom: 0;
+    }
+  }
 }
 
 .order__group-name {
@@ -256,6 +262,11 @@
   &:focus {
     border-color: @special-cyan;
     outline: none;
+
+    + .order__input-icon {
+      fill: @special-cyan;
+      fill-opacity: 1;
+    }
   }
 
   @media (min-width: @tablet-width) {
@@ -265,6 +276,34 @@
 
   @media (min-width: @desktop-width) {
     width: 86%;
+  }
+}
+
+.order__input-icon {
+  position: absolute;
+  bottom: 17px;
+  right: 7px;
+
+  @media (min-width: @tablet-width) {
+    right: 26px;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: 185px;
+  }
+
+  &--mail {
+    bottom: 15px;
+    right: 3px;
+
+    @media (min-width: @tablet-width) {
+      bottom: 65px;
+      right: 22px;
+    }
+
+    @media (min-width: @desktop-width) {
+      right: 181px;
+    }
   }
 }
 
