@@ -19,6 +19,12 @@
   background-color: @light-gray;
   text-align: center;
 
+  @media (min-width: @mobile-width) and (max-width: @tablet-width - 1) {
+    .section-title {
+      font-size: 27px;
+    }
+  }
+
   @media (min-width: @tablet-width) {
     padding-top: 101px;
     padding-bottom: 75px;
