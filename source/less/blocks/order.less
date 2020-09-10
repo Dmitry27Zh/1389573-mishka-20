@@ -6,8 +6,8 @@
     margin-top: 54px;
   }
 
-  @media (min-width: @desktop-width) {
-    .container {
+  .order__wrapper {
+    @media (min-width: @desktop-width) {
       padding-left: 62px;
       padding-right: 177px;
     }
@@ -44,7 +44,7 @@
     }
   }
 
-  .container {
+  .order__wrapper {
     display: flex;
     flex-direction: column;
     padding-top: 29px;
@@ -60,7 +60,7 @@
   }
 
   &--color {
-    .container {
+    .order__wrapper {
       @media (min-width: @desktop-width) {
         padding-right: 146px;
       }
@@ -68,7 +68,7 @@
   }
 
   &--contacts {
-    .container:first-child {
+    .order__wrapper:first-child {
       padding-bottom: 0;
     }
   }
@@ -331,7 +331,7 @@
   }
 }
 
-.order__wrapper {
+.order__info {
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-between;
@@ -344,7 +344,7 @@
   }
 }
 
-.order__info {
+.order__info-text {
   margin-top: 17px;
   margin-bottom: 30px;
 

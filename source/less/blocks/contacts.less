@@ -6,22 +6,26 @@
   @media (min-width: @tablet-width) {
     padding-top: 68px;
     padding-bottom: 57px;
-
-    .container:last-of-type {
-      text-align: center;
-    }
   }
 
   @media (min-width: @desktop-width) {
     padding-top: 150px;
     padding-bottom: 105px;
+  }
+}
 
-    .container {
-      padding-left: 176px;
-      padding-right: calc(1050px / 2);
+.contacts__wrapper {
+  @media (min-width: @tablet-width) {
+    &:last-of-type {
+      text-align: center;
     }
+  }
 
-    .container:last-of-type {
+  @media (min-width: @desktop-width) {
+    padding-left: 176px;
+    padding-right: calc(1050px / 2);
+
+    &:last-of-type {
       text-align: left;
     }
   }

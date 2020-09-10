@@ -1,7 +1,6 @@
 .social {
   display: flex;
   align-items: center;
-  margin-right: -40px;
 
   @media (min-width: @tablet-width) {
     max-width: 300px;
@@ -14,6 +13,10 @@
 
 .social__item {
   margin-right: 40px;
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .social__link {
