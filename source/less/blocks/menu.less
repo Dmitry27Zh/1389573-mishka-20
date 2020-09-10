@@ -5,11 +5,22 @@
     margin-top: 22px;
   }
 
+  &--no-js {
+    .menu__toggle {
+      display: none;
+    }
+
+    .menu__list {
+      display: block;
+    }
+  }
+
   &--opened {
     .menu__toggle {
       &::before,
       &::after {
         top: 14px;
+        left: 3px;
         width: 24px;
       }
 

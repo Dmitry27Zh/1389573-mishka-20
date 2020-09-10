@@ -1,33 +1,33 @@
-const gulp = require("gulp");
-const plumber = require("gulp-plumber");
-const sourcemap = require("gulp-sourcemaps");
-const less = require("gulp-less");
-const postcss = require("gulp-postcss");
-const autoprefixer = require("autoprefixer");
-const csso = require("gulp-csso");
-const posthtml = require("gulp-posthtml");
-const include = require("posthtml-include");
-const htmlmin = require("gulp-htmlmin");
-const sync = require("browser-sync").create();
-const imagemin = require("gulp-imagemin");
-const webp = require("gulp-webp");
-const svgstore = require("gulp-svgstore");
-const rename = require("gulp-rename");
-const del = require("del");
-const gulpif = require("gulp-if");
+const gulp = require('gulp');
+const plumber = require('gulp-plumber');
+const sourcemap = require('gulp-sourcemaps');
+const less = require('gulp-less');
+const postcss = require('gulp-postcss');
+const autoprefixer = require('autoprefixer');
+const csso = require('gulp-csso');
+const posthtml = require('gulp-posthtml');
+const include = require('posthtml-include');
+const htmlmin = require('gulp-htmlmin');
+const sync = require('browser-sync').create();
+const imagemin = require('gulp-imagemin');
+const webp = require('gulp-webp');
+const svgstore = require('gulp-svgstore');
+const rename = require('gulp-rename');
+const del = require('del');
+const gulpif = require('gulp-if');
 
 // Styles
 
 const styles = () => {
-  return gulp.src("source/less/style.less")
+  return gulp.src('source/less/style.less')
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(less())
     .pipe(postcss([
       autoprefixer()
     ]))
-    .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("build/css"))
+    .pipe(sourcemap.write('.'))
+    .pipe(gulp.dest('build/css'))
     .pipe(sync.stream());
 }
 
@@ -36,7 +36,7 @@ exports.styles = styles;
 // CSS min
 
 const cssMin = () => {
-  return gulp.src("source/less/style.less")
+  return gulp.src('source/less/style.less')
   .pipe(plumber())
   .pipe(sourcemap.init())
   .pipe(less())
@@ -44,9 +44,9 @@ const cssMin = () => {
     autoprefixer()
   ]))
   .pipe(csso())
-  .pipe(rename("style.min.css"))
-  .pipe(sourcemap.write("."))
-  .pipe(gulp.dest("build/css"))
+  .pipe(rename('style.min.css'))
+  .pipe(sourcemap.write('.'))
+  .pipe(gulp.dest('build/css'))
   .pipe(sync.stream());
 }
 
@@ -55,12 +55,12 @@ exports.cssMin = cssMin;
 // html
 
 const html = () => {
-  return gulp.src("source/*.html")
+  return gulp.src('source/*.html')
     .pipe(posthtml([
       include()
     ]))
     .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(gulp.dest("build"));
+    .pipe(gulp.dest('build'));
 }
 
 exports.html = html;
@@ -68,13 +68,13 @@ exports.html = html;
 // Images
 
 const images = () => {
-  return gulp.src("source/img/*.{png,jpg,svg}")
+  return gulp.src('source/img/*.{png,jpg,svg}')
     .pipe(imagemin([
       imagemin.optipng({ optimizationLevel: 3 }),
       imagemin.mozjpeg({ progressive: true }),
       imagemin.svgo()
     ]))
-    .pipe(gulp.dest("source/img"))
+    .pipe(gulp.dest('source/img'))
 }
 
 exports.images = images;
@@ -82,9 +82,9 @@ exports.images = images;
 // Webp
 
 const webpics = () => {
-  return gulp.src("source/img/*.{jpg,png}")
+  return gulp.src('source/img/*.{jpg,png}')
     .pipe(webp({ quality: 90 }))
-    .pipe(gulp.dest("build/img"));
+    .pipe(gulp.dest('build/img'));
 }
 
 exports.webpics = webpics;
@@ -92,10 +92,10 @@ exports.webpics = webpics;
 // Sprite
 
 const sprite = () => {
-  return gulp.src("source/img/sprite-*.svg")
+  return gulp.src('source/img/sprite-*.svg')
     .pipe(svgstore())
-    .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("build/img"))
+    .pipe(rename('sprite.svg'))
+    .pipe(gulp.dest('build/img'))
 }
 
 exports.sprite = sprite;
@@ -104,14 +104,14 @@ exports.sprite = sprite;
 
 const copy = () => {
   return gulp.src([
-    "source/**/*.{woff,woff2}",
-    "source/img/**",
-    "source/js/**",
-    "source/*.ico",
+    'source/**/*.{woff,woff2}',
+    'source/img/**',
+    'source/js/**',
+    'source/*.ico',
   ], {
-    base: "source"
+    base: 'source'
   })
-    .pipe(gulp.dest("build"));
+    .pipe(gulp.dest('build'));
 }
 
 exports.copy = copy;
@@ -119,7 +119,7 @@ exports.copy = copy;
 // Clean
 
 const clean = () => {
-  return del("build");
+  return del('build');
 }
 
 exports.clean = clean;
@@ -127,8 +127,8 @@ exports.clean = clean;
 // JS copy
 
 const jscopy = () => {
-  return gulp.src("source/js/**/*.js")
-    .pipe(gulp.dest("build/js"));
+  return gulp.src('source/js/**/*.js')
+    .pipe(gulp.dest('build/js'));
 }
 
 exports.jscopy = jscopy;
@@ -144,7 +144,7 @@ const server = (done) => {
     notify: false,
     ui: false,
   });
-  gulp.watch("source/*.html").on("change", sync.reload);
+  gulp.watch('source/.html').on('change', sync.reload);
   done();
 }
 
@@ -153,14 +153,14 @@ exports.server = server;
 // Watcher
 
 const watcher = () => {
-  gulp.watch("source/less/**/*.less", gulp.series("styles", "cssMin"));
-  gulp.watch("source/*.html").on("change", gulp.series("html"));
-  gulp.watch("source/js/**/*.js").on("change", gulp.series("jscopy"));
+  gulp.watch('source/less/**/*.less', gulp.series('styles', 'cssMin'));
+  gulp.watch('source/*.html').on('change', gulp.series('html'));
+  gulp.watch('source/js/**/*.js').on('change', gulp.series('jscopy'));
 }
 
-exports.default = gulp.series(
-  styles, server, watcher
-);
+const build = gulp.series(clean, copy, html, styles, cssMin, webpics, sprite);
+exports.build = build;
 
-gulp.task("build", gulp.series(clean, copy, html, styles, cssMin, webpics, sprite));
-gulp.task("start", gulp.series("build", server, watcher));
+exports.default = gulp.series(
+  build, server, watcher
+);
