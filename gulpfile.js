@@ -106,6 +106,15 @@ const clean = () => {
 
 exports.clean = clean;
 
+// JS copy
+
+const jscopy = () => {
+  return gulp.src("source/js/**/*.js")
+    .pipe(gulp.dest("build/js"));
+}
+
+exports.jscopy = jscopy;
+
 // Server
 
 const server = (done) => {
@@ -128,6 +137,7 @@ exports.server = server;
 const watcher = () => {
   gulp.watch("source/less/**/*.less", gulp.series("styles"));
   gulp.watch("source/*.html").on("change", gulp.series("html"));
+  gulp.watch("source/js/**/*.js").on("change", gulp.series("jscopy"));
 }
 
 exports.default = gulp.series(

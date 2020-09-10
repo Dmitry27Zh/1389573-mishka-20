@@ -107,8 +107,10 @@
             </table>
             <div class="popular__photo">
               <picture>
-                <source type="image/webp" media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.webp 1x, img/triple-set-desktop@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.webp 1x, img/triple-set-tablet@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 1150px)"
+                  srcset="img/triple-set-desktop@1x.webp 1x, img/triple-set-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/triple-set-tablet@1x.webp 1x, img/triple-set-tablet@2x.webp 2x">
                 <source type="image/webp" srcset="img/triple-set-mobile@1x.webp 1x, img/triple-set-mobile@2x.webp 2x">
                 <source media="(min-width: 1150px)"
                   srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
@@ -190,8 +192,10 @@
       </div>
       <div class="contacts__map">
         <picture>
-          <source type="image/webp" media="(min-width: 1150px)" srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x">
-          <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 1150px)"
+            srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)"
+            srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x">
           <source type="image/webp" srcset="img/map-mobile@1x.webp 1x, img/map-mobile@2x.webp 2x">
           <source media="(min-width: 1150px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
           <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
@@ -254,7 +258,34 @@
       </a>
     </div>
   </footer>
+  <section class="modal">
+    <div class="modal__overlay"></div>
+    <div class="modal__wrapper">
+      <div class="modal__text">
+        <h2 class="modal__title">Добавить в корзину</h2>
+        <p class="modal__call">Выберите размер:</p>
+        <form class="modal__size" action="https://echo.htmlacademy.ru/">
+          <ul class="modal__list">
+            <li class="modal__item modal__item--current">
+              <input class="modal__input visually-hidden" type="radio" id="size-s" name="size" value="s" checked>
+              <label class="modal__value" for="size-s">S</label>
+            </li>
+            <li class="modal__item">
+              <input class="modal__input visually-hidden" type="radio" id="size-m" name="size" value="m">
+              <label class="modal__value" for="size-m">M</label>
+            </li>
+            <li class="modal__item">
+              <input class="modal__input visually-hidden" type="radio" id="size-l" name="size" value="l">
+              <label class="modal__value" for="size-l">S</label>
+            </li>
+          </ul>
+          <button class="modal__submit" type="submit">Добавить</button>
+        </form>
+      </div>
+    </div>
+  </section>
   <script src="js/mobile-menu.js"></script>
+  <script src="js/modal-index.js"></script>
 </body>
 
 </html>

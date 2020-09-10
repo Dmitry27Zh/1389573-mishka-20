@@ -1,0 +1,124 @@
+.modal {
+  display: none;
+
+  &--opened {
+    display: block;
+  }
+}
+
+.modal__overlay {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: @basic-white;
+  opacity: 0.9;
+}
+
+.modal__wrapper {
+  position: fixed;
+  z-index: 100;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  width: 100%;
+  padding-top: 28px;
+  padding-bottom: 46px;
+  border: 1px solid @special-gray;
+  box-shadow: 0 5px 10px @modal-shadow;
+  background-color: @basic-white;
+  opacity: 1;
+
+  @media (min-width: @tablet-width) {
+    width: 73.7%;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 49%;
+  }
+}
+
+.modal__text {
+  width: 81.25%;
+  margin: 0 auto;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    width: 62.5%;
+  }
+}
+
+.modal__title {
+  width: 160px;
+  margin: 0 auto;
+  margin-bottom: 14px;
+  .font(25px, 30px);
+  font-weight: bold;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    .font(30px, 57px);
+  }
+}
+
+.modal__call {
+  margin: 0;
+  .font(15px, 30px);
+  color: @dark-gray;
+
+  @media (min-width: @tablet-width) {
+    font-size: 17px;
+  }
+}
+
+.modal__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 21px;
+  margin-bottom: 31px;
+  margin-right: -2.7%;
+}
+
+.modal__item {
+  flex-grow: 1;
+  margin-right: 2.7%;
+  &--current {
+    border-color: @light-cyan;
+  }
+}
+
+.modal__value {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 18px 0;
+  .font(17px, 17px);
+  font-weight: bold;
+  color: @dark-gray;
+  border: 2px solid rgba(@dark-gray, 0.1);
+
+  &:hover {
+    border-color: rgba(@dark-gray, 0.3);
+  }
+
+  .modal__input:checked ~ & {
+    border-color: @light-cyan;
+  }
+}
+
+.modal__submit {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 18px;
+  .font(17px, 17px);
+  font-weight: bold;
+  color: @basic-white;
+  text-transform: uppercase;
+  background-color: @light-cyan;
+  border: none;
+}
