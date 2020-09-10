@@ -14,6 +14,7 @@ const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const rename = require("gulp-rename");
 const del = require("del");
+const gulpif = require("gulp-if");
 
 // Styles
 
@@ -25,14 +26,31 @@ const styles = () => {
     .pipe(postcss([
       autoprefixer()
     ]))
-    .pipe(csso())
-    .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
 }
 
 exports.styles = styles;
+
+// CSS min
+
+const cssMin = () => {
+  return gulp.src("source/less/style.less")
+  .pipe(plumber())
+  .pipe(sourcemap.init())
+  .pipe(less())
+  .pipe(postcss([
+    autoprefixer()
+  ]))
+  .pipe(csso())
+  .pipe(rename("style.min.css"))
+  .pipe(sourcemap.write("."))
+  .pipe(gulp.dest("build/css"))
+  .pipe(sync.stream());
+}
+
+exports.cssMin = cssMin;
 
 // html
 
@@ -41,7 +59,7 @@ const html = () => {
     .pipe(posthtml([
       include()
     ]))
-    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest("build"));
 }
 
@@ -52,8 +70,8 @@ exports.html = html;
 const images = () => {
   return gulp.src("source/img/*.{png,jpg,svg}")
     .pipe(imagemin([
-      imagemin.optipng({optimizationLevel: 3}),
-      imagemin.mozjpeg({progressive: true}),
+      imagemin.optipng({ optimizationLevel: 3 }),
+      imagemin.mozjpeg({ progressive: true }),
       imagemin.svgo()
     ]))
     .pipe(gulp.dest("source/img"))
@@ -65,7 +83,7 @@ exports.images = images;
 
 const webpics = () => {
   return gulp.src("source/img/*.{jpg,png}")
-    .pipe(webp({quality: 90}))
+    .pipe(webp({ quality: 90 }))
     .pipe(gulp.dest("build/img"));
 }
 
@@ -93,7 +111,7 @@ const copy = () => {
   ], {
     base: "source"
   })
-  .pipe(gulp.dest("build"));
+    .pipe(gulp.dest("build"));
 }
 
 exports.copy = copy;
@@ -135,7 +153,7 @@ exports.server = server;
 // Watcher
 
 const watcher = () => {
-  gulp.watch("source/less/**/*.less", gulp.series("styles"));
+  gulp.watch("source/less/**/*.less", gulp.series("styles", "cssMin"));
   gulp.watch("source/*.html").on("change", gulp.series("html"));
   gulp.watch("source/js/**/*.js").on("change", gulp.series("jscopy"));
 }
@@ -144,5 +162,5 @@ exports.default = gulp.series(
   styles, server, watcher
 );
 
-gulp.task("build", gulp.series(clean, copy, html, styles, webpics, sprite));
+gulp.task("build", gulp.series(clean, copy, html, styles, cssMin, webpics, sprite));
 gulp.task("start", gulp.series("build", server, watcher));
