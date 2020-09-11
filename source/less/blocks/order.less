@@ -226,6 +226,12 @@
   }
 }
 
+.order__input:focus {
+  & + .order__option-name::before {
+    border-color: @special-cyan;
+  }
+}
+
 .order__input:checked + .order__option-name {
   &--type::after {
     top: 0;
