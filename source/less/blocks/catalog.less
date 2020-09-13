@@ -13,6 +13,12 @@
 }
 
 .catalog__list {
+  margin-bottom: -30px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: -54px;
+  }
+
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: 316px 316px 316px;
@@ -21,16 +27,10 @@
 }
 
 .catalog__item {
-  &:not(:last-child) {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 
-    @media (min-width: @tablet-width) {
-      margin-bottom: 54px;
-    }
-
-    @media (min-width: @desktop-width) {
-      margin-bottom: 0;
-    }
+  @media (min-width: @tablet-width) {
+    margin-bottom: 54px;
   }
 
   @media (min-width: @tablet-width) {

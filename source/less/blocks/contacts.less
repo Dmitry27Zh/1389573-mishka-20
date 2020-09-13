@@ -1,5 +1,7 @@
 .contacts {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
   padding-top: 38px;
   padding-bottom: 39px;
 
@@ -9,18 +11,13 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 150px;
-    padding-bottom: 105px;
-  }
-}
-
-.contacts__wrapper {
-  box-sizing: border-box;
-  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
     width: 1050px;
     margin: 0 auto;
+    padding-top: 71px;
+    padding-bottom: 105px;
     padding-left: 176px;
-    padding-right: calc(1050px / 2);
   }
 }
 
@@ -60,6 +57,13 @@
   @media (min-width: @tablet-width) {
     width: 87%;
   }
+
+  @media (min-width: @desktop-width) {
+    align-self: flex-end;
+    width: auto;
+    margin: 0;
+    margin-right: 30px;
+  }
 }
 
 .contacts__list {
@@ -81,6 +85,7 @@
 
   @media (min-width: @desktop-width) {
     display: block;
+    margin: 0;
   }
 }
 
@@ -101,6 +106,10 @@
   }
 }
 
+.contacts__name {
+  min-width: 60px;
+}
+
 .contacts__value {
   margin: 0;
   margin-left: 12%;
@@ -111,7 +120,7 @@
     @media (min-width: @tablet-width) {
       box-sizing: border-box;
       width: 257px;
-      padding-right: 34px;
+      padding-right: 20px;
     }
   }
 }
@@ -136,12 +145,6 @@
 
 .contacts__map {
   position: relative;
-  @media (min-width: @desktop-width) {
-    position: absolute;
-    top: 71px;
-    right: calc((100vw - 1050px) / 2);
-    width: calc(1050px / 2);
-  }
 }
 
 .contacts__map-static {
@@ -162,25 +165,26 @@
     height: 457px;
   }
 }
-.contacts__link-wrapper {
-  width: 81.25%;
-  margin: 0 auto;
-  @media (min-width: @tablet-width) {
-    width: auto;
-    text-align: center;
-  }
-
-  @media (min-width: @desktop-width) {
-    text-align: left;
-  }
-}
 
 .contacts__link {
-  width: 100%;
+  align-self: center;
+  width: 81.25%;
   margin-top: 42px;
 
   @media (min-width: @tablet-width) {
-    width: 230px;
-    margin-top: 55px;
+    width: auto;
+    margin-top: 85px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+
+  &--desktop {
+    display: none;
+
+    @media (min-width: @desktop-width) {
+      display: inline-block;
+    }
   }
 }

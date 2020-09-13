@@ -1,10 +1,12 @@
-let popularLink = document.querySelector('.popular__link');
+let popularLinks = document.querySelectorAll('.popular__link');
 let modal = document.querySelector('.modal');
 let modalOverlay = document.querySelector('.modal__overlay');
 
-popularLink.onclick = function(evt) {
-  evt.preventDefault();
-  modal.classList.add('modal--opened');
+for (let popularLink of popularLinks) {
+  popularLink.onclick = function(evt) {
+    evt.preventDefault();
+    modal.classList.add('modal--opened');
+  }
 }
 
 modalOverlay.onclick = function() {
