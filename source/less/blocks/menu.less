@@ -78,6 +78,10 @@
 }
 
 .menu__list {
+  @media (min-width: @mobile-width) and (max-width: @tablet-width - 1) {
+    margin-left: 7px;
+  }
+
   @media (max-width: @tablet-width - 1) {
     display: none;
   }
