@@ -3,7 +3,11 @@
   padding-bottom: 55px;
 
   @media (min-width: @tablet-width) {
-    margin-top: 54px;
+    margin-top: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 100px;
   }
 
   .order__wrapper {
@@ -26,7 +30,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 14%;
+    padding-left: 176px;
+    padding-right: 155px;
   }
 }
 
@@ -52,6 +57,7 @@
     @media (min-width: @tablet-width) {
       flex-direction: row;
       justify-content: space-between;
+      align-items: flex-start;
       padding-top: 50px;
       padding-bottom: 50px;
 
@@ -69,12 +75,52 @@
 
   &--contacts {
     .order__wrapper:first-child {
+      padding-top: 0;
       padding-bottom: 0;
+
+      @media (min-width: @tablet-width) {
+        padding-top: 45px;
+      }
+    }
+
+    .order__wrapper:last-child {
+      @media (min-width: @tablet-width) {
+        padding-top: 10px;
+      }
+    }
+
+    .order__wrapper {
+      padding-top: 0;
+
+      @media (min-width: @tablet-width) {
+        padding-top: 30px;
+      }
+    }
+
+    .order__input-text {
+      padding-top: 17px;
+      padding-bottom: 17px;
+    }
+
+    .order__group-name {
+      margin-top: 30px;
+    }
+  }
+
+  &--message {
+    .order__wrapper {
+      padding-top: 35px;
+
+      @media (min-width: @tablet-width) {
+        padding-top: 48px;
+        padding-bottom: 55px;
+      }
     }
   }
 }
 
 .order__group-name {
+  margin: 0;
   display: flex;
 
   .font(17px, 17px);
@@ -117,14 +163,20 @@
 
   &--type {
     margin-bottom: -11px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: -24px;
+    }
   }
 
   &--color {
+    margin-top: 25px;
     margin-bottom: -23px;
 
     @media (min-width: @tablet-width) {
       display: flex;
       flex-wrap: wrap;
+      margin-top: 0;
     }
 
     @media (min-width: @desktop-width) {
@@ -151,7 +203,7 @@
   }
 
   &--color {
-    margin-bottom: 23px;
+    margin-bottom: 22px;
 
     @media (min-width: @tablet-width) {
       width: 52.4%;
@@ -172,7 +224,7 @@
 
   &--user {
     flex-direction: column;
-    margin-bottom: 22px;
+    margin-bottom: 20px;
 
     @media (min-width: @tablet-width) {
       flex-direction: row;
@@ -201,15 +253,28 @@
       content: "";
       display: block;
       flex-shrink: 0;
-      width: 38px;
-      height: 38px;
+      width: 36px;
+      height: 36px;
       margin-right: 19px;
       border: 2px solid @dark-gray;
+
+      @media (min-width: @tablet-width) {
+        width: 48px;
+        height: 48px;
+        margin-right: 25px;
+      }
     }
 
     &::after {
       content: "";
       position: absolute;
+    }
+
+    &--color {
+      &::before {
+        width: 30px;
+        height: 30px;
+      }
     }
   }
 
@@ -242,6 +307,10 @@
     height: 18px;
     border-radius: 50%;
     background-color: @special-cyan;
+
+    @media (min-width: @tablet-width) {
+      left: 17px;
+    }
   }
 
   &--color::after {
@@ -253,12 +322,18 @@
     border-top: none;
     border-right: none;
     transform: rotate(-45deg);
+
+    @media (min-width: @tablet-width) {
+      top: 15px;
+      width: 30px;
+    }
   }
 }
 
 .order__input-text {
   box-sizing: border-box;
-  padding: 17px 0;
+  padding-top: 15px;
+  padding-bottom: 13px;
   border: none;
   border-bottom: 2px solid @basic-black;
   font: inherit;
@@ -317,7 +392,7 @@
   box-sizing: border-box;
   height: 142px;
   padding: 17px;
-  margin-top: 22px;
+  margin-top: 27px;
   border: 2px solid @dark-gray;
   font: inherit;
 
@@ -370,6 +445,9 @@
 
   @media (min-width: @tablet-width) {
     width: auto;
+    padding-left: 32px;
+    padding-right: 32px;
     order: -1;
+    font-size: 17px;
   }
 }
